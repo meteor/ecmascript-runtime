@@ -1,0 +1,37 @@
+{
+  "name": "ecmascript-containers",
+  "author": "Ben Newman <ben@meteor.com>",
+  "version": "0.1.0",
+  "description": "Polyfills for ECMAScript 2015 (Weak)Map and (Weak)Set",
+  "keywords": [
+    "meteor",
+    "ecmascript",
+    "container",
+    "polyfill",
+    "map",
+    "weakmap",
+    "set",
+    "weakset"
+  ],
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --reporter spec --full-trace",
+    "prepublish": "webpack"
+  },
+  "homepage": "https://github.com/meteor/ecmascript-containers",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/meteor/ecmascript-containers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meteor/ecmascript-containers/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.2.5",
+    "webpack": "~1.10.5"
+  }
+}
