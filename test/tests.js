@@ -1,8 +1,6 @@
 var assert = require("assert");
 
-describe("ECMAScript 2015 containers", function () {
-  var containers = require("ecmascript-containers");
-
+function runTests(containers) {
   it("Map is defined", function () {
     assert.strictEqual(typeof containers.Map, "function");
   });
@@ -29,5 +27,24 @@ describe("ECMAScript 2015 containers", function () {
       value: key,
       done: false
     });
+  });
+}
+
+describe("ecmascript-containers", function () {
+  runTests(require("ecmascript-containers"));
+});
+
+describe("server.js", function () {
+  runTests(require("../server.js"));
+});
+
+describe("client.js", function () {
+  global.window = global;
+  require("../client.js");
+  delete global.window;
+
+  runTests({
+    Map: global.Map,
+    Set: global.Set
   });
 });
