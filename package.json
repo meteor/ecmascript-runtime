@@ -1,7 +1,7 @@
 {
   "name": "ecmascript-containers",
   "author": "Ben Newman <ben@meteor.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Polyfills for ECMAScript 2015 Map and Set",
   "keywords": [
     "meteor",
