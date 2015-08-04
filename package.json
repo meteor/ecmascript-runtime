@@ -15,7 +15,7 @@
   ],
   "main": "server.js",
   "scripts": {
-    "test": "mocha --reporter spec --full-trace",
+    "test": "test/run.sh",
     "prepublish": "webpack"
   },
   "homepage": "https://github.com/meteor/ecmascript-containers",
