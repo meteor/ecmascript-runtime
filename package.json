@@ -1,7 +1,7 @@
 {
   "name": "ecmascript-containers",
   "author": "Ben Newman <ben@meteor.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Polyfills for ECMAScript 2015 (Weak)Map and (Weak)Set",
   "keywords": [
     "meteor",
