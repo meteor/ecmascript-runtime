@@ -31,7 +31,7 @@ function runTests(containers) {
 }
 
 describe("ecmascript-containers", function () {
-  runTests(require("ecmascript-containers"));
+  runTests(require(".."));
 });
 
 describe("server.js", function () {
