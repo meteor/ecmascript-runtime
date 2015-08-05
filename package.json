@@ -1,7 +1,7 @@
 {
   "name": "ecmascript-collections",
   "author": "Ben Newman <ben@meteor.com>",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Polyfills for ECMAScript 2015 Map and Set",
   "keywords": [
     "meteor",
