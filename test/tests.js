@@ -1,12 +1,12 @@
 var assert = require("assert");
 
-function runTests(containers) {
+function runTests(collections) {
   it("Map is defined", function () {
-    assert.strictEqual(typeof containers.Map, "function");
+    assert.strictEqual(typeof collections.Map, "function");
   });
 
   it("Map basically works", function () {
-    var map = new containers.Map;
+    var map = new collections.Map;
     var key = {};
     map.set(key, 1234);
     assert.deepEqual(map.entries().next(), {
@@ -16,11 +16,11 @@ function runTests(containers) {
   });
 
   it("Set is defined", function () {
-    assert.strictEqual(typeof containers.Set, "function");
+    assert.strictEqual(typeof collections.Set, "function");
   });
 
   it("Set basically works", function () {
-    var set = new containers.Set;
+    var set = new collections.Set;
     var key = {};
     set.add(key);
     assert.deepEqual(set.values().next(), {
@@ -30,7 +30,7 @@ function runTests(containers) {
   });
 }
 
-describe("ecmascript-containers", function () {
+describe("ecmascript-collections", function () {
   runTests(require(".."));
 });
 

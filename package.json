@@ -1,5 +1,5 @@
 {
-  "name": "ecmascript-containers",
+  "name": "ecmascript-collections",
   "author": "Ben Newman <ben@meteor.com>",
   "version": "0.1.3",
   "description": "Polyfills for ECMAScript 2015 Map and Set",
@@ -16,13 +16,13 @@
     "test": "test/run.sh",
     "prepublish": "webpack"
   },
-  "homepage": "https://github.com/meteor/ecmascript-containers",
+  "homepage": "https://github.com/meteor/ecmascript-collections",
   "repository": {
     "type": "git",
-    "url": "git://github.com/meteor/ecmascript-containers.git"
+    "url": "git://github.com/meteor/ecmascript-collections.git"
   },
   "bugs": {
-    "url": "https://github.com/meteor/ecmascript-containers/issues"
+    "url": "https://github.com/meteor/ecmascript-collections/issues"
   },
   "license": "MIT",
   "dependencies": {
