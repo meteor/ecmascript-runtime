@@ -26,10 +26,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "core-js": "1.0.1"
+    "core-js": "1.1.1"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
-    "webpack": "~1.10.5"
+    "webpack": "~1.11.0"
   }
 }
