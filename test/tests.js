@@ -28,6 +28,22 @@ function runTests(collections) {
       done: false
     });
   });
+
+  it("Array methods", function () {
+    assert.deepEqual(Array.from("123", Number), [1, 2, 3]);
+    assert.deepEqual(Array.of(1, 3, 5), [1, 3, 5]);
+    assert.deepEqual(
+      Array(5).fill("oyez"),
+      ["oyez", "oyez", "oyez", "oyez", "oyez"]
+    );
+
+    function isOdd(n) {
+      return n % 2;
+    }
+
+    assert.strictEqual([2, 3, 4].find(isOdd), 3);
+    assert.strictEqual([2, 3, 4].findIndex(isOdd), 1);
+  });
 }
 
 describe("ecmascript-collections", function () {
