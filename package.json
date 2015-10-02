@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "meteor-promise": "0.5.0",
-    "core-js": "1.1.4"
+    "core-js": "1.2.1"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
