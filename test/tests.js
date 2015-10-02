@@ -1,6 +1,17 @@
 var assert = require("assert");
 
 function runTests(collections) {
+  it("Promise is defined", function () {
+    assert.strictEqual(typeof collections.Promise, "function");
+  });
+
+  it("Promise basically works", function (done) {
+    collections.Promise.resolve(1234).then(function (result) {
+      assert.strictEqual(result, 1234);
+      done();
+    });
+  });
+
   it("Map is defined", function () {
     assert.strictEqual(typeof collections.Map, "function");
   });
@@ -60,6 +71,7 @@ describe("client.js", function () {
   delete global.window;
 
   runTests({
+    Promise: global.Promise,
     Map: global.Map,
     Set: global.Set
   });
