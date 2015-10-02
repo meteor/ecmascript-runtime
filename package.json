@@ -1,8 +1,8 @@
 {
-  "name": "ecmascript-collections",
+  "name": "meteor-ecmascript-runtime",
   "author": "Ben Newman <ben@meteor.com>",
   "version": "0.1.6",
-  "description": "Polyfills for ECMAScript 2015 Map and Set",
+  "description": "Polyfills for new ECMAScript 2015 APIs like Promise, Map, and Set",
   "keywords": [
     "meteor",
     "ecmascript",

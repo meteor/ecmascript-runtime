@@ -1,23 +1,23 @@
 var assert = require("assert");
 
-function runTests(collections) {
+function runTests(runtime) {
   it("Promise is defined", function () {
-    assert.strictEqual(typeof collections.Promise, "function");
+    assert.strictEqual(typeof runtime.Promise, "function");
   });
 
   it("Promise basically works", function (done) {
-    collections.Promise.resolve(1234).then(function (result) {
+    runtime.Promise.resolve(1234).then(function (result) {
       assert.strictEqual(result, 1234);
       done();
     });
   });
 
   it("Map is defined", function () {
-    assert.strictEqual(typeof collections.Map, "function");
+    assert.strictEqual(typeof runtime.Map, "function");
   });
 
   it("Map basically works", function () {
-    var map = new collections.Map;
+    var map = new runtime.Map;
     var key = {};
     map.set(key, 1234);
     assert.deepEqual(map.entries().next(), {
@@ -27,11 +27,11 @@ function runTests(collections) {
   });
 
   it("Set is defined", function () {
-    assert.strictEqual(typeof collections.Set, "function");
+    assert.strictEqual(typeof runtime.Set, "function");
   });
 
   it("Set basically works", function () {
-    var set = new collections.Set;
+    var set = new runtime.Set;
     var key = {};
     set.add(key);
     assert.deepEqual(set.values().next(), {
@@ -57,7 +57,7 @@ function runTests(collections) {
   });
 }
 
-describe("ecmascript-collections", function () {
+describe("meteor-ecmascript-runtime", function () {
   runTests(require(".."));
 });
 
