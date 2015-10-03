@@ -1,3 +1,3 @@
-# ecmascript-collections [![Build Status](https://travis-ci.org/meteor/ecmascript-collections.svg?branch=master)](https://travis-ci.org/meteor/ecmascript-collections)
+# meteor-ecmascript-runtime [![Build Status](https://travis-ci.org/meteor/ecmascript-collections.svg?branch=master)](https://travis-ci.org/meteor/ecmascript-collections)
 
-Polyfills for ECMAScript 2015 Map and Set
+Polyfills for new ECMAScript 2015 APIs like Map and Set
