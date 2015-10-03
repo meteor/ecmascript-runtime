@@ -1,17 +1,6 @@
 var assert = require("assert");
 
 function runTests(runtime) {
-  it("Promise is defined", function () {
-    assert.strictEqual(typeof runtime.Promise, "function");
-  });
-
-  it("Promise basically works", function (done) {
-    runtime.Promise.resolve(1234).then(function (result) {
-      assert.strictEqual(result, 1234);
-      done();
-    });
-  });
-
   it("Map is defined", function () {
     assert.strictEqual(typeof runtime.Map, "function");
   });
@@ -71,7 +60,6 @@ describe("client.js", function () {
   delete global.window;
 
   runTests({
-    Promise: global.Promise,
     Map: global.Map,
     Set: global.Set
   });

@@ -2,13 +2,12 @@
   "name": "meteor-ecmascript-runtime",
   "author": "Ben Newman <ben@meteor.com>",
   "version": "0.2.0",
-  "description": "Polyfills for new ECMAScript 2015 APIs like Promise, Map, and Set",
+  "description": "Polyfills for new ECMAScript 2015 APIs like Map and Set",
   "keywords": [
     "meteor",
     "ecmascript",
     "container",
     "polyfill",
-    "promise",
     "map",
     "set"
   ],
@@ -27,7 +26,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "meteor-promise": "0.5.0",
     "core-js": "1.2.1"
   },
   "devDependencies": {
