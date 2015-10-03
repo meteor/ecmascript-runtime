@@ -1,6 +1,40 @@
 var assert = require("assert");
 
 function runTests(runtime) {
+  it("Object has appropriate static methods", function () {
+    assert.strictEqual(typeof Object.assign, "function");
+    assert.strictEqual(typeof Object.is, "function");
+    assert.strictEqual(typeof Object.setPrototypeOf, "function");
+    assert.strictEqual(typeof Object.getPrototypeOf, "function");
+  });
+
+  it("String has appropriate prototype methods", function () {
+    assert.strictEqual(typeof "asdf".startsWith, "function");
+    assert.strictEqual(typeof "asdf".endsWith, "function");
+    assert.strictEqual(typeof "asdf".repeat, "function");
+    assert.strictEqual(typeof "asdf".trim, "function");
+  });
+
+  it("Symbol basically works", function () {
+    assert.strictEqual(typeof global.Symbol, "function");
+    assert.strictEqual(global.Symbol, runtime.Symbol);
+    assert.strictEqual(
+      typeof Array.prototype[runtime.Symbol.iterator],
+      "function"
+    );
+  });
+
+  it("Function.prototype[Symbol.hasInstance]", function () {
+    assert.strictEqual(
+      typeof Function.prototype[Symbol.hasInstance],
+      "function"
+    );
+
+    function Constructor() {};
+    assert.strictEqual(Constructor[Symbol.hasInstance](new Constructor), true);
+    assert.strictEqual(Constructor[Symbol.hasInstance]({}), false);
+  });
+
   it("Map is defined", function () {
     assert.strictEqual(typeof runtime.Map, "function");
   });
@@ -46,21 +80,22 @@ function runTests(runtime) {
   });
 }
 
-describe("meteor-ecmascript-runtime", function () {
-  runTests(require(".."));
+describe("client.js", function () {
+  require("../client.js");
+  runTests(global);
+
+  it("reuses global constructors", function () {
+    var server = require("../server.js");
+    assert.strictEqual(global.Symbol, server.Symbol);
+    assert.strictEqual(global.Map, server.Map);
+    assert.strictEqual(global.Set, server.Set);
+  });
 });
 
 describe("server.js", function () {
   runTests(require("../server.js"));
 });
 
-describe("client.js", function () {
-  global.window = global;
-  require("../client.js");
-  delete global.window;
-
-  runTests({
-    Map: global.Map,
-    Set: global.Set
-  });
+describe("meteor-ecmascript-runtime", function () {
+  runTests(require(".."));
 });
