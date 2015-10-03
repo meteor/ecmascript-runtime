@@ -16,13 +16,13 @@
     "test": "test/run.sh",
     "prepublish": "webpack"
   },
-  "homepage": "https://github.com/meteor/ecmascript-collections",
+  "homepage": "https://github.com/meteor/ecmascript-runtime",
   "repository": {
     "type": "git",
-    "url": "git://github.com/meteor/ecmascript-collections.git"
+    "url": "git://github.com/meteor/ecmascript-runtime.git"
   },
   "bugs": {
-    "url": "https://github.com/meteor/ecmascript-collections/issues"
+    "url": "https://github.com/meteor/ecmascript-runtime/issues"
   },
   "license": "MIT",
   "dependencies": {
