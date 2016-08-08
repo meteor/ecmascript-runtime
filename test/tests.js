@@ -22,6 +22,12 @@ function runTests(runtime) {
       typeof Array.prototype[runtime.Symbol.iterator],
       "function"
     );
+
+    var obj = Object.create(null);
+    var self = Symbol("self");
+    obj[self] = obj;
+    assert.deepEqual(Object.keys(obj), []);
+    assert.strictEqual(obj[self], obj);
   });
 
   it("Function.prototype[Symbol.hasInstance]", function () {
