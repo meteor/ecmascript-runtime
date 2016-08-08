@@ -85,20 +85,15 @@ function runTests(runtime) {
   });
 }
 
-describe("client.js", function () {
-  require("../client.js");
-  runTests(global);
+describe("server.js", function () {
+  runTests(require("../index.js"));
 
   it("reuses global constructors", function () {
-    var server = require("../server.js");
+    var server = require("../index.js");
     assert.strictEqual(global.Symbol, server.Symbol);
     assert.strictEqual(global.Map, server.Map);
     assert.strictEqual(global.Set, server.Set);
   });
-});
-
-describe("server.js", function () {
-  runTests(require("../server.js"));
 });
 
 describe("meteor-ecmascript-runtime", function () {

@@ -11,10 +11,9 @@
     "map",
     "set"
   ],
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "test/run.sh",
-    "prepublish": "webpack"
+    "test": "test/run.sh"
   },
   "homepage": "https://github.com/meteor/ecmascript-runtime",
   "repository": {
@@ -29,7 +28,6 @@
     "core-js": "1.2.1"
   },
   "devDependencies": {
-    "mocha": "~2.2.5",
-    "webpack": "~1.11.0"
+    "mocha": "~3.0.2"
   }
 }
