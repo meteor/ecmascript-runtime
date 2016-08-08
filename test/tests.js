@@ -26,7 +26,6 @@ function runTests(runtime) {
     var obj = Object.create(null);
     var self = Symbol("self");
     obj[self] = obj;
-    assert.deepEqual(Object.keys(obj), []);
     assert.strictEqual(obj[self], obj);
   });
 
