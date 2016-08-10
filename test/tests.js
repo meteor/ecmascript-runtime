@@ -6,6 +6,9 @@ function runTests(runtime) {
     assert.strictEqual(typeof Object.is, "function");
     assert.strictEqual(typeof Object.setPrototypeOf, "function");
     assert.strictEqual(typeof Object.getPrototypeOf, "function");
+    assert.strictEqual(typeof Object.entries, "function");
+    assert.strictEqual(typeof Object.values, "function");
+    assert.strictEqual(typeof Object.getOwnPropertyDescriptors, "function");
   });
 
   it("String has appropriate prototype methods", function () {
@@ -13,6 +16,12 @@ function runTests(runtime) {
     assert.strictEqual(typeof "asdf".endsWith, "function");
     assert.strictEqual(typeof "asdf".repeat, "function");
     assert.strictEqual(typeof "asdf".trim, "function");
+    assert.strictEqual(typeof "asdf".padStart, "function");
+    assert.strictEqual(typeof "asdf".padEnd, "function");
+    assert.strictEqual(typeof "asdf".trimStart, "function");
+    assert.strictEqual(typeof "asdf".trimEnd, "function");
+    assert.strictEqual(typeof "asdf".trimLeft, "function");
+    assert.strictEqual(typeof "asdf".trimRight, "function");
   });
 
   it("Symbol basically works", function () {
@@ -82,6 +91,7 @@ function runTests(runtime) {
 
     assert.strictEqual([2, 3, 4].find(isOdd), 3);
     assert.strictEqual([2, 3, 4].findIndex(isOdd), 1);
+    assert.strictEqual([2, 3, 4].includes(3), true);
   });
 }
 
