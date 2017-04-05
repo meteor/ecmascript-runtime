@@ -23,6 +23,7 @@ require("core-js/fn/number/to-precision");
 require("core-js/fn/parse-float");
 require("core-js/fn/parse-int");
 require("core-js/fn/array");
+require("core-js/fn/typed");
 
 Symbol = exports.Symbol = global.Symbol ||
   require("core-js/es6/symbol");
