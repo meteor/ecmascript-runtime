@@ -24,6 +24,22 @@ function runTests(runtime) {
     assert.strictEqual(typeof "asdf".trimRight, "function");
   });
 
+  it("Number has appropiate prototype methods", function () {
+    assert.strictEqual(typeof Number.isFinite, "function");
+    assert.strictEqual(typeof Number.isNaN, "function");
+    assert.strictEqual(typeof Number.isInteger, "function");
+    assert.strictEqual(typeof Number.isSafeInteger, "function");
+    assert.strictEqual(typeof Number.parseFloat, "function");
+    assert.strictEqual(typeof Number.parseInt, "function");
+    assert.strictEqual(typeof Number.EPSILON, "number");
+    assert.strictEqual(typeof Number.MAX_SAFE_INTEGER, "number");
+    assert.strictEqual(typeof Number.MIN_SAFE_INTEGER, "number");
+    assert.strictEqual(typeof Number.prototype.toFixed, "function");
+    assert.strictEqual(typeof Number.prototype.toPrecision, "function");
+    assert.strictEqual(typeof parseFloat, "function");
+    assert.strictEqual(typeof parseInt, "function");
+  });
+
   it("Symbol basically works", function () {
     assert.strictEqual(typeof global.Symbol, "function");
     assert.strictEqual(global.Symbol, runtime.Symbol);
