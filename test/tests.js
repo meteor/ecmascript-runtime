@@ -40,6 +40,32 @@ function runTests(runtime) {
     assert.strictEqual(typeof parseInt, "function");
   });
 
+  it("Array has appropiate prototype methods", function () {
+    assert.strictEqual(typeof Array.from, "function");
+    assert.strictEqual(typeof Array.of, "function");
+    assert.strictEqual(typeof Array.isArray, "function");
+    assert.strictEqual(typeof Array.prototype[Symbol.iterator], "function");
+    assert.strictEqual(typeof Array.prototype.copyWithin, "function");
+    assert.strictEqual(typeof Array.prototype.fill, "function");
+    assert.strictEqual(typeof Array.prototype.find, "function");
+    assert.strictEqual(typeof Array.prototype.findIndex, "function");
+    assert.strictEqual(typeof Array.prototype.values, "function");
+    assert.strictEqual(typeof Array.prototype.keys, "function");
+    assert.strictEqual(typeof Array.prototype.entries, "function");
+    assert.strictEqual(typeof Array.prototype.slice, "function");
+    assert.strictEqual(typeof Array.prototype.join, "function");
+    assert.strictEqual(typeof Array.prototype.indexOf, "function");
+    assert.strictEqual(typeof Array.prototype.lastIndexOf, "function");
+    assert.strictEqual(typeof Array.prototype.every, "function");
+    assert.strictEqual(typeof Array.prototype.some, "function");
+    assert.strictEqual(typeof Array.prototype.forEach, "function");
+    assert.strictEqual(typeof Array.prototype.map, "function");
+    assert.strictEqual(typeof Array.prototype.filter, "function");
+    assert.strictEqual(typeof Array.prototype.reduce, "function");
+    assert.strictEqual(typeof Array.prototype.reduceRight, "function");
+    assert.strictEqual(typeof Array.prototype.sort, "function");
+  });
+
   it("Symbol basically works", function () {
     assert.strictEqual(typeof global.Symbol, "function");
     assert.strictEqual(global.Symbol, runtime.Symbol);
