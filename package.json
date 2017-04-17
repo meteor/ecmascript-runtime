@@ -24,10 +24,11 @@
     "url": "https://github.com/meteor/ecmascript-runtime/issues"
   },
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "core-js": "2.4.1"
   },
   "devDependencies": {
+    "core-js": "2.4.1",
     "mocha": "~3.0.2"
   }
 }

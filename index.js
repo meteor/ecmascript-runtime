@@ -1,3 +1,15 @@
+try {
+  require.resolve("core-js/es6/object");
+} catch (e) {
+  throw new Error([
+    "The core-js npm package could not be found in your node_modules ",
+    "directory. Please run the following command to install it:",
+    "",
+    "  meteor npm install --save core-js",
+    ""
+  ].join("\n"));
+}
+
 require("core-js/es6/object");
 require("core-js/es6/array");
 require("core-js/es6/string");
