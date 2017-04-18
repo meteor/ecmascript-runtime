@@ -66,6 +66,38 @@ function runTests(runtime) {
     assert.strictEqual(typeof Array.prototype.sort, "function");
   });
 
+  it("Typed Array has appropiate prototype methods", function () {
+    assert.strictEqual(typeof Uint8Array.from, "function");
+    assert.strictEqual(typeof Uint8Array.of, "function");
+    assert.strictEqual(typeof Uint8Array.BYTES_PER_ELEMENT, "number");
+    assert.strictEqual(typeof Uint8Array.prototype.BYTES_PER_ELEMENT, "number");
+    assert.strictEqual(typeof Uint8Array.prototype[Symbol.iterator], "function");
+    assert.strictEqual(typeof Uint8Array.prototype.copyWithin, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.fill, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.find, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.findIndex, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.values, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.keys, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.entries, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.slice, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.join, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.indexOf, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.lastIndexOf, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.every, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.some, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.forEach, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.map, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.filter, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.reduce, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.reduceRight, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.reverse, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.set, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.sort, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.subarray, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.toString, "function");
+    assert.strictEqual(typeof Uint8Array.prototype.toLocaleString, "function");
+  });
+
   it("Symbol basically works", function () {
     assert.strictEqual(typeof global.Symbol, "function");
     assert.strictEqual(global.Symbol, runtime.Symbol);
