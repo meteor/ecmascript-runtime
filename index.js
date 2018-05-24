@@ -37,7 +37,7 @@ require("core-js/fn/parse-int");
 require("core-js/fn/array");
 
 Symbol = exports.Symbol = global.Symbol ||
-  require("core-js/es6/symbol");
+  require("core-js/es7/symbol");
 
 Map = exports.Map = require("core-js/es6/map");
 Set = exports.Set = require("core-js/es6/set");
